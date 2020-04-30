@@ -1,0 +1,139 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void UC(){
+    cout<<" 1: ROCK 2: PAPER 3: SCISSOR"<<endl;
+    
+ 
+    cout<<"\n User turn(choose between 1,2 or 3):";
+    int u;
+    cin>>u;
+    cout<<u;
+    switch(u){
+        case 1: cout<<"\nROCK\n"; break;
+        case 2: cout<<"\nPAPER\n"; break;
+        case 3: cout<<"\nSCISSOR\n"; break;
+    }
+    cout<<"\n Computer turn:";
+    
+    srand(time(NULL));
+    int c=(rand() % 3) + 1;
+    
+    cout<<c;
+    switch(c){
+        case 1: cout<<"\nROCK\n"; break;
+        case 2: cout<<"\nPAPER\n"; break;
+        case 3: cout<<"\nSCISSOR\n"; break;
+    }
+    
+    cout<<"Winner is:";
+    if(u==c){
+        cout<<"Match draw!!!";
+    }
+    else if((u==1 && c==2)||(u==3 && c==1) ||(u==2 && c==3)) {
+        cout<<"Computer Wins!!!";
+    }
+    else{
+        cout<<"User Wins!!!";
+    }
+    
+}
+
+void UU(){
+     cout<<" 1: ROCK 2: PAPER 3: SCISSOR"<<endl;
+    
+ 
+    cout<<"\n User 1 turn:";
+    int u;
+    cin>>u;
+    cout<<u;
+    switch(u){
+        case 1: cout<<"\nROCK\n"; break;
+        case 2: cout<<"\nPAPER\n"; break;
+        case 3: cout<<"\nSCISSOR\n"; break;
+    }
+    cout<<"\n User 2 turn:";
+    int c;
+    cin>>c;
+    cout<<c;
+    switch(c){
+        case 1: cout<<"\nROCK\n"; break;
+        case 2: cout<<"\nPAPER\n"; break;
+        case 3: cout<<"\nSCISSOR\n"; break;
+    }
+    
+    cout<<"Winner is:";
+    if(u==c){
+        cout<<"Match draw!!!";
+    }
+    else if((u==1 && c==2)||(u==3 && c==1) ||(u==2 && c==3)) {
+        cout<<"User 2 Wins!!!";
+    }
+    else{
+        cout<<"User 1 Wins!!!";
+    }
+}
+void CC(){
+    cout<<" 1: ROCK 2: PAPER 3: SCISSOR"<<endl;
+    
+ 
+    cout<<"\n Computer 1 turn:";
+
+    srand(time(NULL));
+    int u=(rand() % 3) + 1;
+    cout<<u;
+    switch(u){
+        case 1: cout<<"\nROCK\n"; break;
+        case 2: cout<<"\nPAPER\n"; break;
+        case 3: cout<<"\nSCISSOR\n"; break;
+    }
+    cout<<"\n Computer 2 turn:";
+    
+  
+    int c=(rand() % 3) + 1;
+    
+    cout<<c;
+    switch(c){
+        case 1: cout<<"\nROCK\n"; break;
+        case 2: cout<<"\nPAPER\n"; break;
+        case 3: cout<<"\nSCISSOR\n"; break;
+    }
+    
+    cout<<"Winner is:";
+    if(u==c){
+        cout<<"Match draw!!!";
+    }
+    else if((u==1 && c==2)||(u==3 && c==1) ||(u==2 && c==3)) {
+        cout<<"Computer 2 Wins!!!";
+    }
+    else{
+        cout<<"Computer 1 Wins!!!";
+    }
+}
+int main()
+{   cout<<"\n";
+    cout<<"--------------------------------------------------------------------------------------------\n";
+    cout<<"--------------------------------------ROCK PAPER SCISSOR------------------------------------\n";
+    cout<<"--------------------------------------------------------------------------------------------\n\n\n";
+    
+    cout<<"----RULES OF THE GAME ARE:----"<<endl;
+    cout<<"1. ROCK VS PAPER --> PAPER WINS!!!"<<endl;
+    cout<<"2. ROCK VS SCISSOR --> ROCK WINS!!!"<<endl;
+    cout<<"3. PAPER VS SCISSOR --> SCISSOR WINS!!!"<<endl;
+    
+
+cout<<"\n\n1. User VS Computer\n2. User 1 VS User 2\n3. Computer 1 VS Computer 2"<<endl;
+cout<<"\nenter your choice:"<<endl;
+int n;
+cin>>n;
+switch(n){
+    case 1: UC();break;
+    case 2: UU();break;
+    case 3: CC();break;
+    default: cout<<"Invalid choice"<<endl;
+}
+    
+    
+    return 0;
+}
